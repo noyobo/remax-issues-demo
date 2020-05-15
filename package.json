@@ -1,0 +1,25 @@
+{
+  "name": "my-app-show-hide",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Remax Project",
+  "main": "index.js",
+  "keywords": [],
+  "author": "农有宝 <nongyb@weipaitang.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "remax build -w -t",
+    "build": "cross-env NODE_ENV=production remax build -t"
+  },
+  "dependencies": {
+    "@remax/wechat": "^2.0.7",
+    "add": "^2.0.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "remax": "^2.0.7",
+    "yarn": "^1.22.4"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2"
+  }
+}
