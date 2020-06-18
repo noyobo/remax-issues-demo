@@ -8,16 +8,16 @@
   "author": "农有宝 <nongyb@weipaitang.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "remax build -w -t",
-    "build": "cross-env NODE_ENV=production remax build -t"
+    "dev": "cd app && remax build -w -t",
+    "build": "cd app && cross-env NODE_ENV=production remax build -t"
   },
   "dependencies": {
-    "@remax/macro": "^2.4.1",
-    "@remax/wechat": "^2.4.1",
+    "@remax/macro": "^2.5.5",
+    "@remax/wechat": "^2.5.5",
     "add": "^2.0.6",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "remax": "^2.0.7",
+    "remax": "^2.5.5",
     "yarn": "^1.22.4"
   },
   "devDependencies": {
