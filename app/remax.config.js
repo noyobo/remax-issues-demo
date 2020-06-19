@@ -11,6 +11,7 @@ module.exports = {
         __dirname,
         '../packages/face-components/src'
       ),
+      react: path.join(__dirname, '../node_modules/react'),
     });
   },
 };
