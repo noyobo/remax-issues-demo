@@ -12,11 +12,23 @@ class Home extends React.Component {
     };
     return (
       <View
-        className={styles.app}
-        {...restProps}
-        wechat-catchtouchmove={console.log}
+        className={styles.div}
+        onClick={() => {
+          console.log('parent');
+        }}
+        onTouchMove={() => {
+          console.log('parent move');
+        }}
       >
-        绑定事件
+        最外层元素
+        <View
+          className={styles.div}
+          wechat-catchtouchmove={console.log}
+          {...restProps}
+        >
+          绑定事件
+        </View>
+        <View className={styles.div}>未绑定</View>
       </View>
     );
   }
