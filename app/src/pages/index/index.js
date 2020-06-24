@@ -2,35 +2,24 @@ import * as React from 'react';
 import { View } from '@remax/wechat';
 import styles from './index.css';
 
-import { usePageEvent } from '@remax/macro';
+export default class A extends React.Component {
+  state = { paddingBottom: '0px' };
 
-export default function () {
-  const [st, setSt] = React.useState(0);
+  componentDidMount() {
+    this.setState({ paddingBottom: '34px' });
+  }
 
-  usePageEvent('onPageScroll', (res) => {
-    console.log('onPageScroll', res.scrollTop);
-    setSt(res.scrollTop);
-  });
-
-  const height = 100;
-
-  // React.useEffect(() => {
-  //   setTimeout(() => {
-  //     setHeight(Math.floor(Math.random() * 300 + 100));
-  //   }, 500);
-  // });
-
-  return (
-    <View className={styles.app}>
+  render() {
+    const { paddingBottom } = this.state;
+    console.log('render');
+    return (
       <View
         style={{
-          height: (height + st) * 2 + 'px',
-          backgroundColor: 'blue',
-          top: 100,
+          paddingBottom,
         }}
       >
-        变化的高度 {st}
+        变化的高度 {paddingBottom}
       </View>
-    </View>
-  );
+    );
+  }
 }
