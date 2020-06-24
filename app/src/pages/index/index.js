@@ -1,34 +1,36 @@
 import * as React from 'react';
 import { View } from '@remax/wechat';
 import styles from './index.css';
-import { Tabs } from '@facejs/components';
-// import ScrollB from '../../ScrollB';
+
+import { usePageEvent } from '@remax/macro';
 
 export default function () {
+  const [st, setSt] = React.useState(0);
+
+  usePageEvent('onPageScroll', (res) => {
+    console.log('onPageScroll', res.scrollTop);
+    setSt(res.scrollTop);
+  });
+
+  const height = 100;
+
+  // React.useEffect(() => {
+  //   setTimeout(() => {
+  //     setHeight(Math.floor(Math.random() * 300 + 100));
+  //   }, 500);
+  // });
+
   return (
     <View className={styles.app}>
-      <Tabs></Tabs>
-      {/* <ScrollB></ScrollB> */}
-      <View style={{ height: 100 }}>页面滚动</View>
-      <View style={{ height: 100 }}>页面滚动</View>
-      <View style={{ height: 100 }}>页面滚动</View>
-      <View style={{ height: 100 }}>页面滚动</View>
-      <View style={{ height: 100 }}>页面滚动</View>
-      <View style={{ height: 100 }}>页面滚动</View>
-      <View style={{ height: 100 }}>页面滚动</View>
-      <View style={{ height: 100 }}>页面滚动</View>
-      <View style={{ height: 100 }}>页面滚动</View>
-      <View style={{ height: 100 }}>页面滚动</View>
-      <View style={{ height: 100 }}>页面滚动</View>
-      <View style={{ height: 100 }}>页面滚动</View>
-      <View style={{ height: 100 }}>页面滚动</View>
-      <View style={{ height: 100 }}>页面滚动</View>
-      <View style={{ height: 100 }}>页面滚动</View>
-      <View style={{ height: 100 }}>页面滚动</View>
-      <View style={{ height: 100 }}>页面滚动</View>
-      <View style={{ height: 100 }}>页面滚动</View>
-      <View style={{ height: 100 }}>页面滚动</View>
-      <View style={{ height: 100 }}>页面滚动</View>
+      <View
+        style={{
+          height: (height + st) * 2 + 'px',
+          backgroundColor: 'blue',
+          top: 100,
+        }}
+      >
+        变化的高度 {st}
+      </View>
     </View>
   );
 }
