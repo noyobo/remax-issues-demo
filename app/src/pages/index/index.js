@@ -1,25 +1,16 @@
 import * as React from 'react';
-import { View } from '@remax/wechat';
-import styles from './index.css';
 
-export default class A extends React.Component {
-  state = { paddingBottom: '0px' };
+import TabBar from '../../components/TabBar';
+import Empty from '../../components/Empty';
 
-  componentDidMount() {
-    this.setState({ paddingBottom: '34px' });
-  }
-
+class A extends React.Component {
   render() {
-    const { paddingBottom } = this.state;
-    console.log('render');
     return (
-      <View
-        style={{
-          paddingBottom,
-        }}
-      >
-        变化的高度 {paddingBottom}
-      </View>
+      <>
+        <TabBar />
+        <Empty />
+      </>
     );
   }
 }
+export default A;

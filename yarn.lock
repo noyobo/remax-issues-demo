@@ -1069,7 +1069,7 @@
     "@remax/types" "2.5.5"
     "@types/babel__traverse" "^7.0.8"
 
-"@remax/one@2.5.5":
+"@remax/one@2.5.5", "@remax/one@^2.5.5":
   version "2.5.5"
   resolved "http://npm.wpt.la/@remax%2fone/-/one-2.5.5.tgz#3365d97169aa7c9e1df247c5f4399fa294ec636a"
   integrity sha1-M2XZcWmqfJ4d8kfF9DmfopTsY2o=

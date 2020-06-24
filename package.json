@@ -8,11 +8,12 @@
   "author": "农有宝 <nongyb@weipaitang.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "cd app && remax build -w -t",
+    "dev": "cd app && cross-env REMAX_DEBUG=true remax build -w -t",
     "build": "cd app && cross-env NODE_ENV=production remax build -t"
   },
   "dependencies": {
     "@remax/macro": "^2.5.5",
+    "@remax/one": "^2.5.5",
     "@remax/wechat": "^2.5.5",
     "add": "^2.0.6",
     "react": "^16.13.1",
