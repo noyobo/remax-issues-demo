@@ -1,0 +1,441 @@
+// 商品列表两栏布局 左边图片定宽 右边填满剩余宽度
+.itemTwoColumnWrap(@width: 1.6rem, @height:1.6rem, @marginRight: 0.2rem) {
+    display: flex;
+    flex-flow: row;
+    .leftWrap {
+        width: @width;
+        height: @height;
+        margin-right: @marginRight;
+        .itemImg {
+            width: 100%;
+            height: 100%;
+            border-radius: 0.12rem;
+            &.noRadius {
+                border-radius: unset;
+            }
+        }
+    }
+    .rightWrap {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        .itemTitle {
+            font-size: 0.32rem;
+            line-height: 0.45rem;
+        }
+        .subText {
+            color: #999;
+            font-size: 0.26rem;
+            line-height: 0.32rem;
+            margin-top: 0.08rem;
+            &.doubleText {
+                display: flex;
+                .text1 {
+                    width: 2.5rem;
+                }
+            }
+        }
+        .toDetailLink {
+            font-size: 0.26rem;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            color: #4b6eb2;
+        }
+    }
+}
+
+// 卖家入口 链接列表
+.indexLinkWrap {
+    display: block;
+    padding-left: 0.4rem;
+    background: #fff;
+    .indexLinkBorder {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 0.96rem;
+        font-size: 0.32rem;
+        color: #333;
+        border-bottom: 0.01rem solid #eeeeee;
+    }
+    .left {
+        .alignCenter();
+    }
+    .linkImg {
+        width: 0.4rem;
+        height: 0.4rem;
+        margin-right: 0.26rem;
+    }
+    .right {
+        .alignCenter();
+        padding-right: 0.3rem;
+        color: #6c6e70;
+        font-size: 0.28rem;
+        .arrowRight {
+            color: #cdcdcd;
+            margin-left: 0.2rem;
+        }
+        .redHint {
+            width: 0.44rem;
+            height: 0.3rem;
+            border-radius: 0.15rem;
+            background: #e01f0b;
+            color: #fff;
+            font-size: 0.22rem;
+            .alignCenter();
+            justify-content: center;
+            &.isPlus {
+                width: 0.54rem;
+            }
+        }
+    }
+}
+
+.fitIPX {
+    padding-bottom: 0.2rem;
+    background: #fff;
+}
+
+.indexLinkWrap:last-child {
+    .indexLinkBorder {
+        border: none;
+    }
+}
+
+// "知道了"弹窗，例子：服务费收费规则
+.confirmWrap {
+    width: 5.6rem;
+    border-radius: 0.2rem;
+    background: #fff;
+    .modalContent {
+        font-size: 0.28rem;
+        color: #666;
+        line-height: 1.4em;
+        padding: 0.4rem 0.4rem 0.6rem;
+        .title {
+            font-size: 0.36rem;
+            line-height: 0.54rem;
+            margin-bottom: 0.2rem;
+            color: #333;
+            text-align: center;
+        }
+    }
+    .confirmBtn {
+        font-size: 0.36rem;
+        line-height: 1rem;
+        text-align: center;
+        color: #ab3b3a;
+        border-top: 0.01rem solid #eee;
+    }
+}
+
+// 带label输入框 例子：新建入库单
+.inputWrap {
+    display: flex;
+    flex-flow: row;
+    margin-left: 0.3rem;
+    min-height: 0.91rem;
+    border-bottom: 0.01rem solid #eee;
+    &.noBorder {
+        border-bottom: none;
+    }
+    .label {
+        width: 1.8rem;
+        line-height: 0.9rem;
+        color: #666;
+        font-size: 0.3rem;
+        &.small {
+            width: 1.42rem;
+        }
+    }
+    .input {
+        flex: 1;
+    }
+    .numInput {
+        background: #fff;
+        width: 100%;
+        outline: none;
+        height: 0.9rem;
+        line-height: 0.9rem;
+        font-size: 0.3rem;
+        color: #333;
+        border: none;
+        max-width: 5.7rem;
+    }
+    .numInputPlaceholder {
+        color: #bbb;
+    }
+
+    .deliverySelector {
+        height: 0.9rem;
+        line-height: 0.9rem;
+        color: #bbb;
+        font-size: 0.3rem;
+        &.hasValue {
+            color: #333;
+        }
+    }
+
+    .addressWrap {
+        padding: 0.24rem 0.3rem 0.3rem 0;
+        font-size: 0.28rem;
+        position: relative;
+        .receiver {
+            display: flex;
+            align-items: center;
+            .mobile {
+                margin-left: 0.8rem;
+            }
+        }
+        .address {
+            margin-top: 0.2rem;
+        }
+    }
+}
+.whiteBg .inputWrap:last-child {
+    border: none;
+}
+.pr {
+    position: relative;
+}
+.rightIconWrap {
+    position: absolute;
+    right: 0.3rem;
+    top: 0.23rem;
+    font-size: 0.3rem;
+    i {
+        font-size: 0.4rem;
+    }
+    .icon {
+        width: 0.44rem;
+        height: 0.44rem;
+    }
+}
+
+// 虚线标题 例子：我的库存 -> 标题待入库
+.dashTitleWrap {
+    height: 0.8rem;
+    line-height: 0.8rem;
+    font-size: 0.26rem;
+    color: #666;
+    .alignCenter();
+    justify-content: center;
+    .dashLine {
+        display: block;
+        width: 0.8rem;
+        height: 0.06rem;
+        border-top: 1px dashed #979797;
+        margin: 0 0.2rem;
+    }
+}
+
+// 商品列表按钮 例子：发行管理 转卖赠送按钮
+.itemBtnWrap {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 0.3rem;
+}
+.itemBtn {
+    width: 1.38rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    border: 0.02rem solid #999;
+    border-radius: 0.08rem;
+    margin-left: 0.2rem;
+    color: #333;
+    text-align: center;
+    box-sizing: border-box;
+}
+.itemNumWrap {
+    color: #666;
+    padding: 0.2rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+// 明细链接 例子：交易详情 购买明细
+.detailLinkWrap {
+    padding: 0.3rem;
+    font-size: 0.26rem;
+    color: #666;
+    background: #fafafa;
+    border-radius: 0.08rem;
+    margin-top: 0.3rem;
+    position: relative;
+    background: #fafafa;
+    background-size: 100% 100%;
+    &.darkBg {
+        background: #eee4dd;
+        background-size: 100% 100%;
+    }
+    .title {
+        font-size: 0.3rem;
+        color: #333;
+        margin-bottom: 0.2rem;
+    }
+    .arrowRight {
+        position: absolute;
+        top: 0.62rem;
+        right: 0.22rem;
+        font-size: 0.36rem;
+    }
+}
+
+// 转卖、送礼记录列表
+.detailList {
+    font-size: 0.3rem;
+    line-height: 0.42rem;
+    color: #333;
+    text-align: center;
+    .listHead,
+    .listItem {
+        padding: 0.22rem 0.1rem;
+        background: #fff;
+        border-bottom: 0.01rem solid #eee;
+    }
+    .listHead {
+        color: #666;
+    }
+}
+
+.biddingList {
+    width: 100%;
+    .listHead,
+    .listItem {
+        height: 0.8rem;
+        line-height: 0.8rem;
+        font-size: 0.26rem;
+        text-align: center;
+    }
+    .listHead {
+        color: #666;
+    }
+    .listItem {
+        color: #333;
+        border-top: 0.01rem solid #eee;
+    }
+}
+
+// 红色确认按钮 例子：转卖设置 编辑赠送
+.submitBtnWrap {
+    margin-top: 0.5rem;
+    text-align: center;
+    .submit {
+        background: #ab3b3a;
+        height: 0.88rem;
+        line-height: 0.88rem;
+        &.disabled {
+            background: #ccc;
+        }
+    }
+}
+
+// 白色readme弹窗按钮
+.whiteBtnReadmeContainer {
+    [class*='node'] {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.col {
+    flex: 1;
+}
+.col10 {
+    flex: 0 0 10%;
+}
+.col20 {
+    flex: 0 0 20%;
+}
+.col25 {
+    flex: 0 0 25%;
+}
+.col30 {
+    flex: 0 0 30%;
+}
+.col35 {
+    flex: 0 0 35%;
+}
+.col40 {
+    flex: 0 0 40%;
+}
+.col45 {
+    flex: 0 0 45%;
+}
+.col50 {
+    flex: 0 0 50%;
+}
+
+.alignCenter {
+    display: flex;
+    align-items: center;
+}
+
+.justifyCenter {
+    display: flex;
+    justify-content: center;
+}
+
+.flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spaceBetween {
+    display: flex;
+    justify-content: space-between;
+}
+
+.whiteBg {
+    background: #fff;
+}
+
+.whiteBgWithPadding {
+    background: #fff;
+    padding: 0.2rem 0.3rem;
+}
+
+.redText {
+    color: #ab3b3a;
+}
+
+.pt2 {
+    padding-top: 0.2rem;
+}
+
+.pt4 {
+    padding-top: 0.4rem;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.strongAndUnderline {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.alignRight {
+    text-align: right;
+}
+
+.rmbSymbol {
+    font-size: 0.8em;
+}
+
+.mln1 {
+    margin-left: -0.1rem;
+}

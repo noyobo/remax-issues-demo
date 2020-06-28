@@ -1,0 +1,44 @@
+.tabbar {
+    border-top: 0.01rem solid #eaeae8;
+    position: fixed;
+    z-index: 99;
+    width: 7.5rem;
+    height: 50px;
+    left: 50%;
+    bottom: 0;
+    background-color: #fff;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+}
+
+.menu {
+    flex: 1;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .icon {
+        display: block;
+        width: 24px;
+        height: 24px;
+    }
+    .name {
+        font-size: 12px;
+        height: 12px;
+        line-height: 12px;
+        margin-top: 3px;
+        color: #666;
+    }
+    &.activeMenu {
+        .name {
+            color: #ab3b3a;
+        }
+    }
+}
+
+:global(.needBottomFit) {
+    :global(.tabBar) {
+        padding-bottom: 34px;
+    }
+}
