@@ -5,6 +5,7 @@ const {
 const webpack = require('webpack');
 const less = require('@remax/plugin-less');
 const cwd = process.cwd();
+const path = require('path');
 
 const RemaxAPI = require('@remax/cli/lib/API').default;
 
@@ -19,8 +20,8 @@ const remaxBuildOptions = {
   compressTemplate: true,
   pxToRpx: false,
   analyze: false,
-  cwd,
-  rootDir: 'app-wpt/src',
+  cwd: path.join(cwd, 'app-wpt'),
+  rootDir: 'src',
   target: 'wechat',
   output: 'dist/wechat',
   watch: true,
