@@ -1,0 +1,21 @@
+{
+  "name": "face",
+  "version": "0.1.0",
+  "description": "基于 remax 的多端研发体系",
+  "main": "index.js",
+  "repository": "https://gitlab.weipaitang.com/facejs/face",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@remax/cli": "^2.5.5",
+    "@remax/macro": "^2.5.5",
+    "@remax/one": "^2.5.5",
+    "@remax/plugin-less": "^1.0.0",
+    "@remax/runtime": "^2.5.5",
+    "babel-plugin-import": "^1.13.0",
+    "babel-plugin-minify-dead-code-elimination": "^0.5.1",
+    "babel-plugin-transform-prune-unused-imports": "^1.0.1",
+    "less": "^3.11.3",
+    "react": "^16.13.1"
+  }
+}

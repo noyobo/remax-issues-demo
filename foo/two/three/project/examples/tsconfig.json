@@ -1,0 +1,21 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@facejs/components/*": ["../packages/face-components/src/*"],
+      "@facejs/components": ["../packages/face-components/src"],
+      "@facejs/api/*": ["../packages/face-api/src/*"],
+      "@facejs/api": ["../packages/face-api/src"],
+      "@facejs/hooks": ["../packages/face-hooks/src"],
+      "@facejs/macro": ["../packages/face-macro/src"],
+      "@components/*": ["./src/components/*"]
+    }
+  },
+  "include": [
+    "./typings",
+    "./src",
+    "../node_modules/miniprogram-api-typings/types/wx/lib.wx.api.d.ts",
+    "../node_modules/@remax/one/esm/types/index.d.ts"
+  ]
+}

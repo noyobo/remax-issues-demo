@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": false,
+    "declaration": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noImplicitUseStrict": true,
+    "resolveJsonModule": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "jsx": "react",
+    "target": "es5",
+    "lib": ["ES2015", "DOM"]
+  }
+}

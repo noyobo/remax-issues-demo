@@ -1,2 +1,13 @@
+.DS_Store
 node_modules/
+
 dist/
+# 构建后的文件目录 发布到 npm
+es/
+lib/
+dist/
+.idea/
+yarn-error.log
+**/coverage/
+
+.umi/
