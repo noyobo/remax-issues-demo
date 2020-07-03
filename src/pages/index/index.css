@@ -1,5 +1,5 @@
 .div {
-  padding: 100rpx;
-  border: 4rpx solid #89af83;
-  background-color: rgba(100, 30, 20, 0.3);
+  border: 1px solid #000;
+  padding: 100px;
+  background-color: rgba(13, 66, 66, 0.3);
 }

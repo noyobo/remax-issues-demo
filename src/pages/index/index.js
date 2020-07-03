@@ -5,31 +5,35 @@ import styles from './index.css';
 class Home extends React.Component {
   render() {
     const restProps = {
-      'wechat-catchtap': () => {
-        console.log('catch tap');
+      onClick: (e) => {
+        console.log('children tap', e);
       },
-      'wechat-bindtap': console.log,
+      catchTouchMove: (e) => {
+        console.log('children move', e);
+        // event.stopPropagation();
+      },
     };
     return (
-      <View
-        className={styles.div}
-        onClick={() => {
-          console.log('parent');
-        }}
-        onTouchMove={() => {
-          console.log('parent move');
-        }}
-      >
-        最外层元素
+      <React.Fragment>
         <View
+          data-id="p"
           className={styles.div}
-          wechat-catchtouchmove={console.log}
-          {...restProps}
+          onTouchMove={(e) => {
+            console.log('parent move', e);
+          }}
+          onClick={(e) => {
+            console.log('parent tap', e);
+          }}
         >
+          最外层元素
+          <View data-id="c" className={styles.div} {...restProps}>
+            绑定事件
+          </View>
+        </View>
+        <View data-id="c" className={styles.div} {...restProps}>
           绑定事件
         </View>
-        <View className={styles.div}>未绑定</View>
-      </View>
+      </React.Fragment>
     );
   }
 }

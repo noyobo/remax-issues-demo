@@ -21,4 +21,10 @@ module.exports = {
     //     // },
     //   },
   ],
+  configWebpack({ config }) {
+    config.resolve.alias.merge({
+      '@remax/runtime':
+        '/Users/noyobo/home/github/remax/packages/remax-runtime',
+    });
+  },
 };
