@@ -12,11 +12,11 @@
     "build": "cross-env NODE_ENV=production remax build -t"
   },
   "dependencies": {
-    "@remax/wechat": "^2.0.7",
+    "@remax/wechat": "^2.7.1",
     "add": "^2.0.6",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "remax": "^2.0.7",
+    "remax": "^2.7.1",
     "yarn": "^1.22.4"
   },
   "devDependencies": {
