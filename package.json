@@ -8,7 +8,7 @@
   "author": "农有宝 <nongyb@weipaitang.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "remax build -w -t",
+    "dev": "REMAX_DEBUG=yes remax build -w -t",
     "build": "cross-env NODE_ENV=production remax build -t"
   },
   "dependencies": {
