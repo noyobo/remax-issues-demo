@@ -14,7 +14,7 @@ interface Item {
 }
 
 const randomData = (): Item[] => {
-  return Array.from({ length: 20 }).map(() => {
+  return Array.from({ length: 200 }).map(() => {
     return {
       height: Math.floor(150 + Math.random() * 250) + 24,
       data: mock({
@@ -52,13 +52,6 @@ export default function DemoRecycleViewSimple() {
 
   return (
     <Fragment>
-      <Button
-        onClick={() => {
-          setDtaSource(randomData());
-        }}
-      >
-        更新数据
-      </Button>
       <RecycleView
         finished={ended}
         scrollTop={scrollTop}
@@ -85,6 +78,7 @@ export default function DemoRecycleViewSimple() {
       ) : (
         <View className={styles.loading}>正在加载...</View>
       )}
+      {/* <View>第三次 setData </View> */}
     </Fragment>
   );
 }

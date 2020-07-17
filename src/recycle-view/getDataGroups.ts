@@ -41,17 +41,17 @@ export default function getDataGroups(options: {
       item._startThreshold = prevItemEndThreshold;
       // 装换为 px 单位， 因为 onPageScroll 返回的是 px 单位
       item._endThreshold = prevItemEndThreshold + absoluteHeight;
-      if (item._endThreshold! < pageCaliper[0]!) {
-        // 在屏幕上方
-        item._visible = false;
-        topOffsetGroup[targetGroupIndex] += absoluteHeight;
-      } else if (item._startThreshold! > pageCaliper[1]) {
-        // 在屏幕下方
-        item._visible = false;
-        bottomOffsetGroup[targetGroupIndex] += absoluteHeight;
-      } else {
-        item._visible = true;
-      }
+      // if (item._endThreshold! < pageCaliper[0]!) {
+      //   // 在屏幕上方
+      //   item._visible = false;
+      //   topOffsetGroup[targetGroupIndex] += absoluteHeight;
+      // } else if (item._startThreshold! > pageCaliper[1]) {
+      //   // 在屏幕下方
+      //   item._visible = false;
+      //   bottomOffsetGroup[targetGroupIndex] += absoluteHeight;
+      // } else {
+      item._visible = true;
+      // }
 
       item._groupIndex = dataGroup.length;
       dataGroup.push(item);
